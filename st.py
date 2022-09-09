@@ -7,6 +7,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import ImageFont
 
 st.title('데이터 분석가를 꿈꾸는 장현우..')
 from PIL import Image
