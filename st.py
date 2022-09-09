@@ -7,9 +7,8 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-from PIL import Image, ImageFont
+from PIL import Image
 
-    
 st.title('데이터 분석가를 꿈꾸는 장현우..')
 
 
@@ -115,10 +114,10 @@ df8.columns = ['title', 'count']
 df_1 = df8
 # print(df_1)
 wc = df_1.set_index('title').to_dict()['count']
-font = ImageFont.load_default()
+#font = ImageFont.load_default()
 
 #font = ImageFont.load("arial.pil")
-#font = 'C:\Windows\Fonts\HMFMPYUN.ttf'
+font = 'C:\Windows\Fonts\HMFMPYUN.ttf'
 wordCloud = WordCloud(font_path=font,
                       width=400, height=400, 
                       scale=2.0,
