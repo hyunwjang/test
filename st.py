@@ -8,10 +8,14 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-from PIL import ImageFont
-
+try:
+    from PIL import *
+except AttributeError: #module has no attribute ImageN
+    import Image
+    import ImageDraw
+    import ImageFont
 st.title('데이터 분석가를 꿈꾸는 장현우..')
-from PIL import Image
+
 
 image = Image.open('jang.jpg')
 
@@ -115,8 +119,8 @@ df8.columns = ['title', 'count']
 df_1 = df8
 # print(df_1)
 wc = df_1.set_index('title').to_dict()['count']
-#font = ImageFont.load_default()
-font = ImageFont.load("arial.pil")
+font = ImageFont.load_default()
+#font = ImageFont.load("arial.pil")
 #font = 'C:\Windows\Fonts\HMFMPYUN.ttf'
 wordCloud = WordCloud(font_path=font,
                       width=400, height=400, 
