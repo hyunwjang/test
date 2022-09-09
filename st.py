@@ -1,5 +1,5 @@
 import requests
-from bs3 import BeautifulSoup
+from bs4 import BeautifulSoup
 import re
 from datetime import datetime
 import os
