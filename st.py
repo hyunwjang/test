@@ -91,14 +91,12 @@ print('데이터프레임 변환')
 df = pd.DataFrame(news_dict).T
 
 st.write(query,"  ", str(news_num)+ "개" )
-# df = pd.DataFrame(np.random.randn(5, 2), columns=('col %d' % i for i in range(2)))
+
 st.dataframe(df.style.highlight_max(axis=0))
 
 # st.write("st.table api")
 # st.table(df)
 from wordcloud import WordCloud
-from PIL import Image
-
 
 df_2 = df.drop(['url'], axis = 1)
 from sklearn.feature_extraction.text import CountVectorizer
@@ -115,8 +113,8 @@ df8.columns = ['title', 'count']
 df_1 = df8
 # print(df_1)
 wc = df_1.set_index('title').to_dict()['count']
-
-font = 'C:\Windows\Fonts\HMFMPYUN.ttf'
+font = ImageFont.load_default()
+#font = 'C:\Windows\Fonts\HMFMPYUN.ttf'
 wordCloud = WordCloud(font_path=font,
                       width=400, height=400, 
                       scale=2.0,
