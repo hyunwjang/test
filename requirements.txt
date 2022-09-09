@@ -4,4 +4,4 @@ numpy
 matplotlib
 WordCloud
 sklearn
-ImageFont
+PIL
