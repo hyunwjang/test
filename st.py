@@ -9,6 +9,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from PIL import Image
 from PIL import ImageFont
+
 st.title('데이터 분석가를 꿈꾸는 장현우..')
 
 
@@ -66,9 +67,6 @@ news_dict = {}
 idx = 0
 cur_page = 1
 
-print()
-print('크롤링 중...')
-
 while idx < news_num:
 ### 네이버 뉴스 웹페이지 구성이 바뀌어 태그명, class 속성 값 등을 수정함(20210126) ###
     
@@ -89,10 +87,6 @@ while idx < news_num:
     
     req = requests.get('https://search.naver.com/search.naver' + next_page_url)
     soup = BeautifulSoup(req.text, 'html.parser')
-
-print('크롤링 완료')
-
-print('데이터프레임 변환')
 df = pd.DataFrame(news_dict).T
 
 st.write(query,"  ", str(news_num)+ "개" )
@@ -118,8 +112,8 @@ df8.columns = ['title', 'count']
 df_1 = df8
 # print(df_1)
 wc = df_1.set_index('title').to_dict()['count']
-font = '/usr/share/fonts/truetype/nanum/NanumMyeongjoBold.ttf'
 
+font = '/usr/share/fonts/truetype/nanum/NanumMyeongjoBold.ttf'
 #font = ImageFont.load("arial.pil")
 #font = 'C:\Windows\Fonts\HMFMPYUN.ttf'
 wordCloud = WordCloud(font_path=font,
