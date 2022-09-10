@@ -23,9 +23,6 @@ def get_font_family():
     elif system_name == "Windows":
         font_family = "Malgun Gothic"
     else:
-        # Linux(Colab)
-        !apt-get install fonts-nanum -qq  > /dev/null
-        !fc-cache -fv
 
         import matplotlib as mpl
         mpl.font_manager._rebuild()
