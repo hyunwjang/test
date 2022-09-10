@@ -113,7 +113,7 @@ df_1 = df8
 # print(df_1)
 wc = df_1.set_index('title').to_dict()['count']
 
-font = '/usr/share/fonts/truetype/nanum/NanumMyeongjoBold.ttf'
+font = 'MALGUN.TTF'
 #font = ImageFont.load("arial.pil")
 #font = 'C:\Windows\Fonts\HMFMPYUN.ttf'
 wordCloud = WordCloud(font_path=font,
