@@ -11,6 +11,36 @@ from PIL import Image
 
 st.title('데이터 분석가를 꿈꾸는 장현우..')
 
+def get_font_family():
+    """
+    시스템 환경에 따른 기본 폰트명을 반환하는 함수
+    """
+    import platform
+    system_name = platform.system()
+
+    if system_name == "Darwin" :
+        font_family = "AppleGothic"
+    elif system_name == "Windows":
+        font_family = "Malgun Gothic"
+    else:
+        # Linux(Colab)
+        !apt-get install fonts-nanum -qq  > /dev/null
+        !fc-cache -fv
+
+        import matplotlib as mpl
+        mpl.font_manager._rebuild()
+        findfont = mpl.font_manager.fontManager.findfont
+        mpl.font_manager.findfont = findfont
+        mpl.backends.backend_agg.findfont = findfont
+        
+        font_family = "NanumBarunGothic"
+    return font_family
+
+plt.style.use("seaborn")
+plt.rc("font", family=get_font_family())
+plt.rc("axes", unicode_minus=False)
+
+%config InlineBackend.figure_format = 'retina'
 
 image = Image.open('jang.jpg')
 
@@ -115,7 +145,7 @@ df_1 = df8
 # print(df_1)
 wc = df_1.set_index('title').to_dict()['count']
 #font = ImageFont.load_default()
-font = 'SITKA.TTC'
+font = 'get_font_family()'
 #font = ImageFont.load("arial.pil")
 #font = 'C:\Windows\Fonts\HMFMPYUN.ttf'
 wordCloud = WordCloud(font_path=font,
