@@ -12,11 +12,6 @@ from PIL import ImageFont
 
 st.title('데이터 분석가를 꿈꾸는 장현우..')
 
-
-plt.style.use("seaborn")
-plt.rc("font", family=get_font_family())
-plt.rc("axes", unicode_minus=False)
-
 image = Image.open('jang.jpg')
 
 st.image(image, width =200)
