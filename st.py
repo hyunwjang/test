@@ -37,7 +37,7 @@ if st.button("경력"):
       st.write("유니에스  (2018. 01 ~ 재직중)")
       st.write(" 청년내일채움공제 담당업무를 하고 있습니다.(노무,사무,상담)")
     
-st.subheader("뉴스기사 크롤링 제목 워드클라우드")     
+st.subheader("뉴스기사 제목 워드클라우드")     
 news_num =  st.number_input('페이지수', 100)
 query  = st.text_input('네이버 검색어', '부동산')
 # news_num  = 100
