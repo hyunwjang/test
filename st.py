@@ -16,7 +16,7 @@ image = Image.open('jang.jpg')
 
 st.image(image, width =200)
 
-st.write("사람을 분석하는 것을 좋아하여 심리학을 공부하게 되었지만, 데이터분석을통한 분을 하고자 합니다.")
+st.write("사람을 분석하는 것을 좋아하여 심리학을 공부하게 되었지만, 데이터분석을 하고자 합니다.")
 
 st.subheader("나를 소개합니다")
 selected_item = st.radio("학력", ("2017. 04 ~ 2019. 02", "2009. 02 ~ 2013. 02", "2009"))
