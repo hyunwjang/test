@@ -87,7 +87,7 @@ df = pd.DataFrame(news_dict).T
 
 st.write(query,"  ", str(news_num)+ "개" )
 
-st.dataframe(df.style.highlight_max(axis=0))
+#st.dataframe(df.style.highlight_max(axis=0))
 
 # st.write("st.table api")
 # st.table(df)
@@ -121,3 +121,4 @@ plt.imshow(wordCloud)
 plt.axis("off")
 plt.show()
 st.pyplot(fig)
+
