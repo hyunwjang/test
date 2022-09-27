@@ -40,7 +40,7 @@ if st.button("경력"):
     
 st.subheader("뉴스기사 제목 워드클라우드")     
 news_num =  st.number_input('페이지수', 100)
-query  = st.text_input('네이버 검색어', '부동산')
+query  = st.text_input('네이버 검색어', '쿠팡')
 # news_num  = 100
 #news_num =  st.number_input(뉴스기사 수, value)
 
