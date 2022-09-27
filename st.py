@@ -23,6 +23,7 @@ selected_item = st.radio("학력", ("2017. 04 ~ 2019. 02", "2009. 02 ~ 2013. 02"
 
 if selected_item == "2017. 04 ~ 2019. 02":
     st.write("학점은행제 심리학과")
+    
 elif selected_item == "2009. 02 ~ 2013. 02":
     st.write("송호대학교 호텔관광과")
     
