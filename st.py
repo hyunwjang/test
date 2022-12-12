@@ -9,7 +9,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from PIL import Image
 from PIL import ImageFont
-import sklearn
+
 
    
 st.subheader("뉴스기사 제목 워드클라우드")     
